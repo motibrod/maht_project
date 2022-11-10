@@ -76,7 +76,7 @@ const LoginPage = () => {
                 onClick={handelchange}
                 name="Admin"
                 sx={{ margin: 1, borderRadius: 3 }}
-                variant="contained"mhbjh
+                variant="contained"
               >
                 Admin
               </Button>
