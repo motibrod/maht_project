@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
+  const Navigate = useNavigate();
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -50,7 +53,7 @@ const Login = () => {
           />
 
           <Button
-            type="submit"
+            onClick={ () => {(Navigate("/Details")) }}
             sx={{ margin: 3, borderRadius: 3 }}
             variant="contained"
             size="large"

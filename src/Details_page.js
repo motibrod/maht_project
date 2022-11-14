@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography, ButtonGroup } from "@mui/material";
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Details = () => {
+  const Navigate = useNavigate();
   const [inputs, setInput] = useState({
     name: "",
     phone: "",
@@ -17,7 +19,7 @@ const Details = () => {
   console.log(inputs);
   return (
     <div>
-    <Navbar />
+      <Navbar />
       <Box
         sx={{
           display: "flex",
@@ -94,7 +96,6 @@ const Details = () => {
               label="phone"
               variant="outlined"
               margin="normal"
-
             />
           </Box>
 
@@ -116,13 +117,21 @@ const Details = () => {
               multiline
               rows={4}
               margin="normal"
-
             />
           </Box>
-          <Button sx={{ marginTop: 2, marginBottom: 2, borderRadius: 2 }} size="small">
+          <Button
+            sx={{ marginTop: 2, marginBottom: 2, borderRadius: 2 }}
+            size="small"
+          >
             List of written blessing
           </Button>
-          <Button sx={{marginBottom: 2, borderRadius: 3}} variant="contained" size="large">
+
+          <Button
+            onClick={ () => {(Navigate("/Payment")) }}
+            sx={{ marginBottom: 2, borderRadius: 3 }}
+            variant="contained"
+            size="large"
+          >
             payment
           </Button>
         </Box>
