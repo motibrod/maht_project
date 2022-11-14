@@ -83,27 +83,15 @@ const Navbar = () => {
                   </Button>
                   <Menu {...bindMenu(popupState)}>
                     <Router>
-                      <MenuItem onClick={popupState.close}>
-                        <Link to="/about">Profile</Link>
+                      <MenuItem onClick={popupState.close}><Link to="/about">Profile</Link></MenuItem>
+                      <MenuItem onClick={popupState.close}><Link to="/about">My account</Link></MenuItem>
+                      <MenuItem onClick={popupState.close}><Link to="/about">History</Link></MenuItem>
+                      <MenuItem onClick={popupState.close}><Link to="/about">
+                        List of written blessing</Link>
                       </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link to="/about">My account</Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link to="/about">History</Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link to="/about">List of written blessing</Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link to="/about">Logout</Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link to="/about">Q&A</Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link to="/about">Help</Link>
-                      </MenuItem>
+                      <MenuItem onClick={popupState.close}><Link to="/about">Logout</Link></MenuItem>
+                      <MenuItem onClick={popupState.close}><Link to="/about">Q&A</Link></MenuItem>
+                      <MenuItem onClick={popupState.close}><Link to="/about">Help</Link></MenuItem>
                     </Router>
                   </Menu>
                 </React.Fragment>
