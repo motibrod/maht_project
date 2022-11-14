@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Button, Box } from "@mui/material";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Login from "./Login";
 import Signup from "./Singup";
-import Details_page from "../Details_page";
 
 const LoginPage = () => {
   const Navigate = useNavigate();
@@ -21,6 +20,8 @@ const LoginPage = () => {
         break;
       case "Guset":
         Navigate("/Details");
+        break;
+      default:
         break;
     }
   };
@@ -72,20 +73,16 @@ const LoginPage = () => {
               >
                 Guset
               </Button>
-              <Button
+              {/* <Button
                 onClick={handelchange}
                 name="Admin"
                 sx={{ margin: 1, borderRadius: 3 }}
                 variant="contained"mhbjh
               >
                 Admin
-              </Button>
+              </Button> */}
             </div>
-            {IsLogin && (
-              <vid>
-                <Login />
-              </vid>
-            )}
+            {IsLogin && <Login />}
             {IsSignup && <Signup />}
           </Box>
         </div>
