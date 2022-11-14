@@ -83,7 +83,7 @@ const Navbar = () => {
                   </Button>
                   <Menu {...bindMenu(popupState)}>
                     
-                      <MenuItem onClick={popupState.close}><Route to="/about">Profile</Route></MenuItem>
+                      <MenuItem onClick={popupState.close}><Link to="/about">Profile</Link></MenuItem>
                       <MenuItem onClick={popupState.close}><Link to="/about">My account</Link></MenuItem>
                       <MenuItem onClick={popupState.close}><Link to="/about">History</Link></MenuItem>
                       <MenuItem onClick={popupState.close}><Link to="/about">
