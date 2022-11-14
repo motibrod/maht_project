@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Button,
   ButtonGroup,
@@ -82,17 +82,27 @@ const Navbar = () => {
                     <MenuIcon />
                   </Button>
                   <Menu {...bindMenu(popupState)}>
-                    
-                      <MenuItem onClick={popupState.close}><Route to="/about">Profile</Route></MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">My account</Link></MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">History</Link></MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">
-                        List of written blessing</Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">Logout</Link></MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">Q&A</Link></MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">Help</Link></MenuItem>
-                    
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">Profile</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">My account</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">History</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">List of written blessing</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">Logout</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">Q&A</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">Help</Link>
+                    </MenuItem>
                   </Menu>
                 </React.Fragment>
               )}
