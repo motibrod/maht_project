@@ -1,5 +1,18 @@
 import React, { useState } from "react";
-import { Box, Button, TextField, Typography, ButtonGroup } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  IconButton,
+  Toolbar,
+  Button,
+  TextField,
+  Typography,
+  ButtonGroup,
+} from "@mui/material";
+import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
+import TheatersIcon from "@mui/icons-material/Theaters";
+import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
+import MenuIcon from "@mui/icons-material/Menu";
 import Navbar from './Navbar';
 
 const Details = () => {
@@ -16,10 +29,11 @@ const Details = () => {
   };
   console.log(inputs);
   return (
-    <div>
-    <Navbar />
+    <div sx={{backgroundColor: "#87CEEB"}}>
+    <Navbar/>
       <Box
         sx={{
+          backgroundColor: "#87CEEB",
           display: "flex",
           flexDirection: "column",
           alignItems: "left",
@@ -27,12 +41,10 @@ const Details = () => {
             m: 1,
           },
         }}
-      >
-        <ButtonGroup variant="text" aria-label="text button group">
-          <Button>עיברית</Button>
-          <Button>English</Button>
-        </ButtonGroup>
-      </Box>
+      ></Box>
+      <Typography variant="h2" padding={3} textAlign="center">
+        Eazy Gift
+      </Typography>
       <form>
         <Box
           display="flex"
@@ -52,9 +64,6 @@ const Details = () => {
             },
           }}
         >
-          <Typography variant="h2" padding={3} textAlign="center">
-            Eazy Gift
-          </Typography>
           <Typography variant="h4" padding={3} textAlign="center">
             Johnny and Lily's wedding
           </Typography>
@@ -94,7 +103,6 @@ const Details = () => {
               label="phone"
               variant="outlined"
               margin="normal"
-
             />
           </Box>
 
@@ -116,14 +124,46 @@ const Details = () => {
               multiline
               rows={4}
               margin="normal"
-
             />
           </Box>
-          <Button sx={{ marginTop: 2, marginBottom: 2, borderRadius: 2 }} size="small">
+          <Button
+            sx={{ marginTop: 2, marginBottom: 2, borderRadius: 2 }}
+            size="small"
+          >
             List of written blessing
           </Button>
-          <Button sx={{marginBottom: 2, borderRadius: 3}} variant="contained" size="large">
-            payment
+          <div>
+            <Button
+              sx={{ marginBottom: 2, borderRadius: 3, margin: 1 }}
+              variant="contained"
+              component="label"
+            >
+              <AddPhotoAlternateIcon />
+              <input type="file" hidden />
+            </Button>
+            <Button
+              sx={{ marginBottom: 2, borderRadius: 3, margin: 1 }}
+              variant="contained"
+              component="label"
+            >
+              <TheatersIcon />
+              <input type="file" hidden />
+            </Button>
+            <Button
+              sx={{ marginBottom: 2, borderRadius: 3, margin: 1 }}
+              variant="contained"
+              component="label"
+            >
+              <KeyboardVoiceIcon />
+              <input type="file" hidden />
+            </Button>
+          </div>
+          <Button
+            sx={{ marginBottom: 2, borderRadius: 3, margin: 1 }}
+            variant="contained"
+            size="large"
+          >
+            go to payment
           </Button>
         </Box>
       </form>
