@@ -21,6 +21,9 @@ const LoginPage = () => {
       case "Guset":
         Navigate("/Details");
         break;
+      case "Admin":
+        Navigate("/Admin");
+        break;
       default:
         break;
     }
@@ -73,14 +76,15 @@ const LoginPage = () => {
               >
                 Guset
               </Button>
-              {/* <Button
+              <Button
                 onClick={handelchange}
                 name="Admin"
                 sx={{ margin: 1, borderRadius: 3 }}
-                variant="contained"mhbjh
+                variant="contained"
+                mhbjh
               >
                 Admin
-              </Button> */}
+              </Button>
             </div>
             {IsLogin && <Login />}
             {IsSignup && <Signup />}
