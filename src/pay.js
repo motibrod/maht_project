@@ -1,17 +1,10 @@
 import React, { useState } from "react";
 import { Box, Button, TextField, Typography, ButtonGroup } from "@mui/material";
-import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
-import TheatersIcon from "@mui/icons-material/Theaters";
-import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
-import Navbar from "./Navbar";
-import { useNavigate } from "react-router-dom";
+import AddCardIcon from "@mui/icons-material/AddCard";
 
-const Details = () => {
-  const Navigate = useNavigate();
+const Pay = () => {
   const [inputs, setInput] = useState({
-    name: "",
-    phone: "",
-    blessing: "",
+    Amount_to_pay: "",
   });
   const handelchange = (e) => {
     setInput((prevState) => ({
@@ -22,7 +15,6 @@ const Details = () => {
   console.log(inputs);
   return (
     <div>
-      <Navbar />
       <Box
         sx={{
           display: "flex",
@@ -33,11 +25,11 @@ const Details = () => {
           },
         }}
       >
-        <ButtonGroup variant="text" aria-label="text button group">
-          <Button>עיברית</Button>
-          <Button>English</Button>
-        </ButtonGroup>
+        
       </Box>
+      <Typography variant="h2" padding={3} textAlign="center" margin="auto" marginTop={5}>
+        Eazy Gift
+      </Typography>
       <form>
         <Box
           display="flex"
@@ -57,11 +49,8 @@ const Details = () => {
             },
           }}
         >
-          <Typography variant="h2" padding={3} textAlign="center">
-            Eazy Gift
-          </Typography>
           <Typography variant="h4" padding={3} textAlign="center">
-            Johnny and Lily's wedding
+            Payment page
           </Typography>
 
           <Box
@@ -74,67 +63,21 @@ const Details = () => {
           >
             <TextField
               onChange={handelchange}
-              name="name"
+              name="Amount to pay"
               value={inputs.name}
               id="outlined-basic"
-              label="name"
+              label="Amount to pay"
               variant="outlined"
               margin="normal"
             />
           </Box>
-
-          <Box
-            component="form"
-            sx={{
-              "& > :not(style)": { m: 1, width: "25ch" },
-            }}
-            noValidate
-            autoComplete="off"
-          >
-            <TextField
-              onChange={handelchange}
-              name="phone"
-              value={inputs.phone}
-              id="outlined-basic"
-              label="phone"
-              variant="outlined"
-              margin="normal"
-            />
-          </Box>
-
-          <Box
-            component="form"
-            sx={{
-              "& > :not(style)": { m: 1, width: "25ch" },
-            }}
-            noValidate
-            autoComplete="off"
-          >
-            <TextField
-              onChange={handelchange}
-              name="blessing"
-              value={inputs.blessing}
-              id="outlined-basic"
-              label="blessing"
-              variant="outlined"
-              multiline
-              rows={4}
-              margin="normal"
-            />
-          </Box>
-          <Button
-            sx={{ marginTop: 2, marginBottom: 2, borderRadius: 2 }}
-            size="small"
-          >
-            List of written blessing
-          </Button>
           <div>
             <Button
               sx={{ marginBottom: 2, borderRadius: 3, margin: 1 }}
               variant="contained"
               component="label"
             >
-              <AddPhotoAlternateIcon />
+              <AddCardIcon />
               <input type="file" hidden />
             </Button>
             <Button
@@ -142,7 +85,7 @@ const Details = () => {
               variant="contained"
               component="label"
             >
-              <TheatersIcon />
+              paypal
               <input type="file" hidden />
             </Button>
             <Button
@@ -150,15 +93,13 @@ const Details = () => {
               variant="contained"
               component="label"
             >
-              <KeyboardVoiceIcon />
+              bit
               <input type="file" hidden />
             </Button>
           </div>
+
           <Button
-            onClick={() => {
-              Navigate("/Payment");
-            }}
-            sx={{ marginBottom: 2, borderRadius: 3 }}
+            sx={{ marginBottom: 2, borderRadius: 3 , margin: 1 }}
             variant="contained"
             size="large"
           >
@@ -170,4 +111,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default Pay;
