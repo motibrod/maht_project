@@ -125,9 +125,36 @@ const Details = () => {
           >
             List of written blessing
           </Button>
-
+          <div>
+            <Button
+              sx={{ marginBottom: 2, borderRadius: 3, margin: 1 }}
+              variant="contained"
+              component="label"
+            >
+              <AddPhotoAlternateIcon />
+              <input type="file" hidden />
+            </Button>
+            <Button
+              sx={{ marginBottom: 2, borderRadius: 3, margin: 1 }}
+              variant="contained"
+              component="label"
+            >
+              <TheatersIcon />
+              <input type="file" hidden />
+            </Button>
+            <Button
+              sx={{ marginBottom: 2, borderRadius: 3, margin: 1 }}
+              variant="contained"
+              component="label"
+            >
+              <KeyboardVoiceIcon />
+              <input type="file" hidden />
+            </Button>
+          </div>
           <Button
-            onClick={ () => {(Navigate("/Payment")) }}
+            onClick={() => {
+              Navigate("/Payment");
+            }}
             sx={{ marginBottom: 2, borderRadius: 3 }}
             variant="contained"
             size="large"
