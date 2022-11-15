@@ -15,7 +15,12 @@ import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import MenuIcon from "@mui/icons-material/Menu";
 import Navbar from './Navbar';
 
+import { Box, Button, TextField, Typography, ButtonGroup } from "@mui/material";
+import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
+
 const Details = () => {
+  const Navigate = useNavigate();
   const [inputs, setInput] = useState({
     name: "",
     phone: "",
@@ -31,6 +36,8 @@ const Details = () => {
   return (
     <div sx={{backgroundColor: "#87CEEB"}}>
     <Navbar/>
+    <div>
+      <Navbar />
       <Box
         sx={{
           backgroundColor: "#87CEEB",
@@ -164,6 +171,15 @@ const Details = () => {
             size="large"
           >
             go to payment
+
+
+          <Button
+            onClick={ () => {(Navigate("/Payment")) }}
+            sx={{ marginBottom: 2, borderRadius: 3 }}
+            variant="contained"
+            size="large"
+          >
+            payment
           </Button>
         </Box>
       </form>

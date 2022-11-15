@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Button,
   ButtonGroup,
@@ -82,17 +82,27 @@ const Navbar = () => {
                     <MenuIcon />
                   </Button>
                   <Menu {...bindMenu(popupState)}>
-                    <Router>
-                      <MenuItem onClick={popupState.close}><Link to="/about">Profile</Link></MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">My account</Link></MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">History</Link></MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">
-                        List of written blessing</Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">Logout</Link></MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">Q&A</Link></MenuItem>
-                      <MenuItem onClick={popupState.close}><Link to="/about">Help</Link></MenuItem>
-                    </Router>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">Profile</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">My account</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">History</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">List of written blessing</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">Logout</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">Q&A</Link>
+                    </MenuItem>
+                    <MenuItem onClick={popupState.close}>
+                      <Link to="/about">Help</Link>
+                    </MenuItem>
                   </Menu>
                 </React.Fragment>
               )}
@@ -135,16 +145,16 @@ const Navbar = () => {
     </Box>
   );
 };
-function Home() {
-  return <h2>Home</h2>;
-}
+// function Home() {
+//   return <h2>Home</h2>;
+// }
 
-function About() {
-  return <h2>About</h2>;
-}
+// function About() {
+//   return <h2>About</h2>;
+// }
 
-function Users() {
-  return <h2>Users</h2>;
-}
+// function Users() {
+//   return <h2>Users</h2>;
+// }
 
 export default Navbar;
