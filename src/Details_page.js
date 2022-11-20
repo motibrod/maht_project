@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Box, Button, TextField, Typography, ButtonGroup } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar_0.2";
 import { useNavigate } from "react-router-dom";
+import Couple_names from "./componens/Couple_names";
 
 const Details = () => {
   const Navigate = useNavigate();
@@ -23,21 +24,12 @@ const Details = () => {
   return (
     <div>
       <Navbar />
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "left",
-          "& > *": {
-            m: 1,
-          },
-        }}
+      <div
+        
       >
-        <ButtonGroup variant="text" aria-label="text button group">
-          <Button>עיברית</Button>
-          <Button>English</Button>
-        </ButtonGroup>
-      </Box>
+        <Couple_names />
+      </div>
+
       <form>
         <Box
           display="flex"
@@ -57,13 +49,6 @@ const Details = () => {
             },
           }}
         >
-          <Typography variant="h2" padding={3} textAlign="center">
-            Eazy Gift
-          </Typography>
-          <Typography variant="h4" padding={3} textAlign="center">
-            Johnny and Lily's wedding
-          </Typography>
-
           <Box
             component="form"
             sx={{
@@ -154,6 +139,14 @@ const Details = () => {
               <input type="file" hidden />
             </Button>
           </div>
+          <Button
+            sx={{ marginBottom: 2, borderRadius: 3, margin: 1 }}
+            variant="contained"
+            size="large"
+          >
+            go to payment
+          </Button>
+
           <Button
             onClick={() => {
               Navigate("/Payment");
