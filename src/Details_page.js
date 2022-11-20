@@ -5,6 +5,7 @@ import TheatersIcon from "@mui/icons-material/Theaters";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 import Navbar from "./Navbar_0.2";
 import { useNavigate } from "react-router-dom";
+import Couple_names from "./componens/Couple_names";
 
 const Details = () => {
   const Navigate = useNavigate();
@@ -23,20 +24,12 @@ const Details = () => {
   return (
     <div>
       <Navbar />
-      <Box
-        sx={{
-          backgroundColor: "#87CEEB",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "left",
-          "& > *": {
-            m: 1,
-          },
-        }}
-      ></Box>
-      <Typography variant="h2" padding={3} textAlign="center">
-        Eazy Gift
-      </Typography>
+      <div
+        
+      >
+        <Couple_names />
+      </div>
+
       <form>
         <Box
           display="flex"
@@ -56,10 +49,6 @@ const Details = () => {
             },
           }}
         >
-          <Typography variant="h4" padding={3} textAlign="center">
-            Johnny and Lily's wedding
-          </Typography>
-
           <Box
             component="form"
             sx={{
