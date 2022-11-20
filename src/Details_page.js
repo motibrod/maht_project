@@ -1,21 +1,8 @@
 import React, { useState } from "react";
-import {
-  AppBar,
-  Box,
-  IconButton,
-  Toolbar,
-  Button,
-  TextField,
-  Typography,
-  ButtonGroup,
-} from "@mui/material";
+import { Box, Button, TextField, Typography, ButtonGroup } from "@mui/material";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
-import MenuIcon from "@mui/icons-material/Menu";
-import Navbar from './Navbar';
-
-import { Box, Button, TextField, Typography, ButtonGroup } from "@mui/material";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 
@@ -34,13 +21,10 @@ const Details = () => {
   };
   console.log(inputs);
   return (
-    <div sx={{backgroundColor: "#87CEEB"}}>
-    <Navbar/>
     <div>
       <Navbar />
       <Box
         sx={{
-          backgroundColor: "#87CEEB",
           display: "flex",
           flexDirection: "column",
           alignItems: "left",
@@ -48,10 +32,12 @@ const Details = () => {
             m: 1,
           },
         }}
-      ></Box>
-      <Typography variant="h2" padding={3} textAlign="center">
-        Eazy Gift
-      </Typography>
+      >
+        <ButtonGroup variant="text" aria-label="text button group">
+          <Button>עיברית</Button>
+          <Button>English</Button>
+        </ButtonGroup>
+      </Box>
       <form>
         <Box
           display="flex"
@@ -71,6 +57,9 @@ const Details = () => {
             },
           }}
         >
+          <Typography variant="h2" padding={3} textAlign="center">
+            Eazy Gift
+          </Typography>
           <Typography variant="h4" padding={3} textAlign="center">
             Johnny and Lily's wedding
           </Typography>
@@ -166,15 +155,9 @@ const Details = () => {
             </Button>
           </div>
           <Button
-            sx={{ marginBottom: 2, borderRadius: 3, margin: 1 }}
-            variant="contained"
-            size="large"
-          >
-            go to payment
-
-
-          <Button
-            onClick={ () => {(Navigate("/Payment")) }}
+            onClick={() => {
+              Navigate("/Payment");
+            }}
             sx={{ marginBottom: 2, borderRadius: 3 }}
             variant="contained"
             size="large"

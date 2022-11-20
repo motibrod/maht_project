@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -8,12 +8,12 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Typography, Box } from "@mui/material";
 
-function createData(name, number, sum, blessing, image, video) {
+const createData = (name, number, sum, blessing, image, video) => {
   return { name, number, sum, blessing, image, video };
 }
 
 const rows = [
-  createData("Marilyn Monroe", 1, 200, "hi", "yes", "no"),
+  createData("Marilyn Monroe", 1, 300, "hi", "yes", "no"),
   createData("Donald Trump", 3, 400, "hi", "yes", "no"),
   createData("Albert Enstein", 1, 120, "hi", "yes", "no"),
   createData("Michael Jackson", 2, 300, "hi", "no", "yes"),
@@ -25,10 +25,22 @@ const rows = [
   createData("J.K. Rowling", 5, 1600, "hi", "no", "yes"),
 ];
 
-export default function Admin() {
+
+
+const Admin = () => {
+  let sumOfGifts = 0;
+  rows.forEach(x => {
+    sumOfGifts += x.sum;
+  });
   return (
     <div>
-      <Typography variant="h2" padding={3} textAlign="center" margin="auto" marginTop={5}>
+      <Typography
+        variant="h2"
+        padding={3}
+        textAlign="center"
+        margin="auto"
+        marginTop={5}
+      >
         Eazy Gift
       </Typography>
       <form>
@@ -82,10 +94,14 @@ export default function Admin() {
             </Table>
           </TableContainer>
           <div>
-            <h1 style={{ color: "#00008B", fontFamily: "Comic Sans MS"}}>Total all gifts: 50,000</h1>
+            <h1 style={{ color: "#00008B", fontFamily: "Comic Sans MS" }}>
+              Total all gifts: {sumOfGifts}
+            </h1>
           </div>
         </Box>
       </form>
     </div>
   );
-}
+};
+
+export default Admin;
