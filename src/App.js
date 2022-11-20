@@ -5,19 +5,18 @@ import LoginPage from "./Regisrtaition/Login_page2.0";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Payment from "./Payment";
 import Admin from "./Admin";
-
+import Couple_names from "./componens/Couple_names";
 
 function App() {
   return (
-    // <Admain />
     <div>
+
       <BrowserRouter>
         <Routes>
           <Route element={<LoginPage />} path="/"></Route>
           <Route element={<DetailsPage />} path="/Details"></Route>
           <Route element={<Payment />} path="/Payment"></Route>
           <Route element={<Admin />} path="/Admin"></Route>
-          
         </Routes>
       </BrowserRouter>
     </div>
