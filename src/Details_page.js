@@ -1,22 +1,9 @@
 import React, { useState } from "react";
-import {
-  AppBar,
-  Box,
-  IconButton,
-  Toolbar,
-  Button,
-  TextField,
-  Typography,
-  ButtonGroup,
-} from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
-import MenuIcon from "@mui/icons-material/Menu";
-import Navbar from './Navbar';
-
-import { Box, Button, TextField, Typography, ButtonGroup } from "@mui/material";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar_0.2";
 import { useNavigate } from "react-router-dom";
 
 const Details = () => {
@@ -34,8 +21,6 @@ const Details = () => {
   };
   console.log(inputs);
   return (
-    <div sx={{backgroundColor: "#87CEEB"}}>
-    <Navbar/>
     <div>
       <Navbar />
       <Box
@@ -171,10 +156,12 @@ const Details = () => {
             size="large"
           >
             go to payment
-
+          </Button>
 
           <Button
-            onClick={ () => {(Navigate("/Payment")) }}
+            onClick={() => {
+              Navigate("/Payment");
+            }}
             sx={{ marginBottom: 2, borderRadius: 3 }}
             variant="contained"
             size="large"
