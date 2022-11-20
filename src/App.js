@@ -9,7 +9,6 @@ import Admin from "./Admin";
 
 function App() {
   return (
-    // <Admain />
     <div>
       <BrowserRouter>
         <Routes>
@@ -17,7 +16,6 @@ function App() {
           <Route element={<DetailsPage />} path="/Details"></Route>
           <Route element={<Payment />} path="/Payment"></Route>
           <Route element={<Admin />} path="/Admin"></Route>
-          
         </Routes>
       </BrowserRouter>
     </div>
